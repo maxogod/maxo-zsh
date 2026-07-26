@@ -11,7 +11,7 @@ Just a simple modular zsh config made from [this gist](https://gist.github.com/m
 ## How to setup
 
 ```bash
-git clone <> ~/.zsh/zsh-config
+git clone git@github.com:maxogod/maxo-zsh.git ~/.zsh/zsh-config
 
 cp ~/.zsh/zsh-config/.zshenv ~/.zshenv
 ```

@@ -8,7 +8,7 @@ HISTFILE=~/.zsh_history
 
 # --- Path editions --- #
 
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$HOME/go/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

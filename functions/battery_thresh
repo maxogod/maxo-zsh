@@ -1,0 +1,21 @@
+THRESH_FILE=/sys/class/power_supply/BAT0/charge_control_end_threshold
+
+if [[ ! -f "$THRESH_FILE" ]]; then
+    echo "Error: Battery threshold file not found at $THRESH_FILE"
+    return 1
+fi
+
+if [[ $1 == "set" ]]; then
+    if [[ -z "$2" ]]; then
+        echo "Error: No value provided for the 'set' command."
+        echo "Usage: $0 set [value]"
+        return 1
+    fi
+    echo $2 | sudo tee "$THRESH_FILE" > /dev/null
+    echo "Battery (BAT0) threshold was updated to $2 (remember this won't survive restart)"
+elif [[ $1 == "get" ]]; then
+    THRESH=$(cat "$THRESH_FILE")
+    echo "Battery (BAT0) threshold is $THRESH"
+else
+    echo "Usage: $0 set [value] OR $0 get"
+fi

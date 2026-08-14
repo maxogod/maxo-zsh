@@ -3,5 +3,5 @@ if [[ $1 == "on" ]]; then
 elif [[ $1 == "off" ]]; then
     gnome-extensions disable ubuntu-dock@ubuntu.com
 else
-    echo "Usage: toggle_dock on/off"
+    echo "Usage: $0 on/off"
 fi

@@ -34,4 +34,4 @@ if [[ -d "$ZDOTDIR/conf.d" ]]; then
 fi
 
 # Default executions
-toggle_dock off
+mz-toggle_dock off

@@ -3,6 +3,7 @@
 # --- Aliases --- #
 
 alias vim=nvim
+alias xclip-cp='xclip -selection clipboard'
 
 if [[ -x /usr/bin/dircolors ]]; then
     alias ls='ls --color=auto'

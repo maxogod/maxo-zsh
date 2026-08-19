@@ -33,5 +33,9 @@ if [[ -d "$ZDOTDIR/conf.d" ]]; then
   done
 fi
 
+if [[ -f "$ZDOTDIR/.zshrc_extension.zsh" ]]; then
+    source "$ZDOTDIR/.zshrc_extension.zsh"
+fi
+
 # Default executions
 mz-toggle_dock off
